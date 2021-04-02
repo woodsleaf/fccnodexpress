@@ -1,7 +1,11 @@
 
 var express = require('express');
 var app = express();
-console.log("Hello World");
+//console.log("Hello World");
+var port = process.env.PORT || 3000;
+//app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.get('/', (req, res) => res.send('<HTML>Hello World! <script type="text/javascript">console.log("Hello World");</script></HTML>'));
+
 
 // --> 7)  Mount the Logger middleware here
 
